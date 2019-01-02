@@ -9,3 +9,7 @@
 3) Ajouter cette URL de callback dans FranceConnect (https://franceconnect.gouv.fr/client/login)
 
 4) Ajuster les "scopes" qui vous intéressent dans authentication.php. Si vous n'avez pas besoin de scopes additionnels, vous pouvez ne pas passer l'argument "sup_scope" dans l'appel à authenticationRedirect
+
+5) Lancer les commandes suivantes à la racine du site :
+   openssl genrsa -out ssl/private.pem -aes256 4096
+   openssl rsa -pubout -in ssl/private.pem -out ssl/public.pem
